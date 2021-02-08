@@ -13,7 +13,8 @@ public class Main {
         float f = 4.4f;
         double d = 8.8;
 
-        boolean c = true;
+        char c = '2';
+        boolean v = true;
 
         //3 пункт
         System.out.println("Результат выражени: " + result(1.5f, 2.5f, 3.5f, 4.0f));
