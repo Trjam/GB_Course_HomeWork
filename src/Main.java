@@ -17,7 +17,7 @@ public class Main {
         boolean v = true;
 
         //3 пункт
-        System.out.println("Результат выражени: " + result(1.5f, 2.5f, 3.5f, 4.0f));
+        System.out.println("Результат выражения: " + result(1.5f, 2.5f, 3.5f, 4.0f));
 
         //4 пункт
         System.out.println("Сумма чисел между 10 и 20? " + isResultBetween10and20(5,10));
