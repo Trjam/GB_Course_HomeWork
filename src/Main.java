@@ -42,9 +42,8 @@ public class Main {
 
     //4 пункт
     static boolean isResultBetween10and20 (int a, int b) {
-        if (10<=a+b||a+b<=20)
-            return true;
-        return false;
+        int sum=a+b;
+        return (10 <= sum && sum <= 20);
     }
 
     //5 пункт
@@ -57,9 +56,7 @@ public class Main {
 
     //6 пункт
     static boolean isNegative (int a) {
-        if (a<0)
-            return true;
-        return false;
+        return a < 0;
         //а вообще идея так предложила "return a < 0;", и не только тут, пользуемся подсказками идеи или только авторский код?
     }
 
