@@ -9,7 +9,7 @@ public class Main {
 
         //создаем тарелку + добавляем еды, считаем что тарелка бездонная )
         Plate plate = new Plate(20);
-        plate.addFood(29);
+        plate.addFood(30);
 
         //Создаем масив котов
         String[] names = {"Васька", "Маська", "Муська", "Кузька", "Бегемот"};
@@ -17,7 +17,7 @@ public class Main {
         //будем считать что количество котов в масиве зависит от количества имен
         Cat[] cat = new Cat[names.length];
         for (int i = 0; i < cat.length; i++) {
-            int rng = random.nextInt(20);
+            int rng = random.nextInt(15)+5;                 //чтобы не было котов питающихся одним воздухом
             cat[i] = new Cat(names[i], rng, false);
         }
 
@@ -26,11 +26,9 @@ public class Main {
             value.eat(plate);
         }
 
-        //Смотрим, остался ли кто голодный
+        //с голодных поправил на всех
         for (Cat value : cat) {
-            if (!value.bellyful) {
                 value.showCatInfo();
-            }
         }
 
         plate.showFoodInPlate();

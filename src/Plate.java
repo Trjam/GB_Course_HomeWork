@@ -17,7 +17,7 @@ public class Plate {
     }
 
     void showFoodInPlate () {
-        System.out.println("В тарелке осталось " + food + " еды");
+        System.out.println("\nВ тарелке осталось " + food + " еды");
     }
 
 }
