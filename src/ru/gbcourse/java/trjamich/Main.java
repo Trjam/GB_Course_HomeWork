@@ -9,8 +9,8 @@ public class Main {
         final int h = size / 2;
         float[] arr1 = new float[size];
         float[] arr2 = new float[size];
-        MyArray.fillArray(arr1);
-        MyArray.fillArray(arr2);
+        Arrays.fill(arr1, 1);
+        Arrays.fill(arr2, 1);
 
 
         long t = System.currentTimeMillis();
