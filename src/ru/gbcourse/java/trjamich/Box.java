@@ -3,8 +3,6 @@ package ru.gbcourse.java.trjamich;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.String.valueOf;
-
 public class Box <T extends Fruit>{
 
     private float weight;
@@ -27,7 +25,7 @@ public class Box <T extends Fruit>{
 
     public float getWeight() {
         this.weight = 0.0f;
-        for (T fruit : (List<T>) fruits) {
+        for (T fruit : this.getFruits()) {
             this.weight += fruit.getWeight();
         }
         return this.weight;
@@ -35,5 +33,12 @@ public class Box <T extends Fruit>{
 
     public boolean compare (Box box) {
         return Math.abs(this.getWeight() - box.getWeight()) < 0.00001;
+    }
+
+    public void moveTo(Box<T> box) {
+        for (T fruit : this.getFruits()) {
+            box.addFruit(fruit);
+        }
+        this.getFruits().clear();
     }
 }

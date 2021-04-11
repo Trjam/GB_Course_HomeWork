@@ -1,7 +1,5 @@
 package ru.gbcourse.java.trjamich;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws NoSuchFieldException {
@@ -18,8 +16,12 @@ public class Main {
         //box2.addFruit(new Apple());
 
         System.out.println(box1.compare(box2));
-
         System.out.println(box1.getWeight() + " " + box2.getWeight());
+
+        Box <Apple> box3 = new Box<>();
+        box3.addFruit(new Apple());
+        box3.moveTo(box2);
+        System.out.println(box3.getWeight() + " " + box2.getWeight());
 
 
 
