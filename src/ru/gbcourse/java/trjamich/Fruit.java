@@ -1,9 +1,6 @@
 package ru.gbcourse.java.trjamich;
 
-public class Fruit {
-    private float weight;
+public abstract class Fruit {
 
-    public float getWeight() {
-        return weight;
-    }
+    public abstract float getWeight();
 }

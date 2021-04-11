@@ -7,11 +7,11 @@ public class Box <T extends Fruit>{
 
     private float weight;
 
-    List fruits;// = new ArrayList<>();
+    List<T> fruits;// = new ArrayList<>();
 
-    public <T> Box () {
+    public Box () {
         //this.weight = 0.0f;
-        fruits = new ArrayList<T>();
+        fruits = new ArrayList<>();
     }
 
     public void addFruit(T fruit){
@@ -31,7 +31,7 @@ public class Box <T extends Fruit>{
         return this.weight;
     }
 
-    public boolean compare (Box box) {
+    public boolean compare (Box<?> box) {
         return Math.abs(this.getWeight() - box.getWeight()) < 0.00001;
     }
 

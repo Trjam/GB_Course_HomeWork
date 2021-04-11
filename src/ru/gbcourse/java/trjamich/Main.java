@@ -2,9 +2,9 @@ package ru.gbcourse.java.trjamich;
 
 
 public class Main {
-    public static void main(String[] args) throws NoSuchFieldException {
+    public static void main(String[] args) {
 
-        Box <Orange> box1 = new Box<>();
+        Box <Orange> box1 = new Box<> ();
         box1.addFruit(new Orange());
         box1.addFruit(new Orange());
 
