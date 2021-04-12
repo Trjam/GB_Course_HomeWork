@@ -44,6 +44,8 @@ public class Main {
         System.out.println(box3.getFruits().size() + " " + box2.getFruits().size());
         box3.moveTo(box2);
         System.out.println(box3.getFruits().size() + " " + box2.getFruits().size());
+        box2.moveTo(box2);
+        System.out.println(box3.getFruits().size() + " " + box2.getFruits().size());
     }
 
     public static <T> ArrayList<T> arrayToArrayList(T arr) {

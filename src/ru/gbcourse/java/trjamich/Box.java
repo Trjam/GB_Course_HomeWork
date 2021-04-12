@@ -34,6 +34,10 @@ public class Box <T extends Fruit>{
     }
 
     public void moveTo(Box<T> box) {
+        if (this == box) {
+            return;
+        }
+
         for (T fruit : this.getFruits()) {
             box.addFruit(fruit);
         }
