@@ -7,16 +7,14 @@ public class Box <T extends Fruit>{
 
     private float weight;
 
-    List<T> fruits;// = new ArrayList<>();
+    List<T> fruits;
 
     public Box () {
-        //this.weight = 0.0f;
         fruits = new ArrayList<>();
     }
 
     public void addFruit(T fruit){
         fruits.add(fruit);
-        //this.weight+= fruit.getWeight();
     }
 
     public List<T> getFruits() {
