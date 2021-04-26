@@ -2,7 +2,7 @@ package ru.gbcourse.java.trjamich;
 
 public class MyThread {
 
-    static Object mon = new Object();
+    static final Object mon = new Object();
     static int currentNumber = 1;
 
     public static void runThread (int num, int nextNum, String str) {
@@ -11,7 +11,7 @@ public class MyThread {
                 for (int i = 0; i < 5; i++) {
                     synchronized (mon) {
                         while (currentNumber!=num) {
-                            mon.wait();;
+                            mon.wait();
                         }
                         System.out.println(str);
                         currentNumber = nextNum;
