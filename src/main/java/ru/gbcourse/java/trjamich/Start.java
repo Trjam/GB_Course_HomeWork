@@ -25,14 +25,19 @@ public class Start {
                 .reversed());
 
         for (Method method : methods) {
-            if (method.isAnnotationPresent(BeforeSuite.class)) {
-                methodList.add(0,method);
-            }
-        }
-
-        for (Method method : methods) {
-            if (method.isAnnotationPresent(AfterSuite.class)) {
-                methodList.add(method);
+            if (methodList.size()>0) {
+                if (method.isAnnotationPresent(BeforeSuite.class)) {
+                    if (methodList.get(0).isAnnotationPresent(BeforeSuite.class)) {
+                        throw new RuntimeException("BeforeSuite can't be more then 1");
+                    }
+                    methodList.add(0, method);
+                }
+                if (method.isAnnotationPresent(AfterSuite.class)) {
+                    if (methodList.get(methodList.size() - 1).isAnnotationPresent(AfterSuite.class)) {
+                        throw new RuntimeException("AfterSuite can't be more then 1");
+                    }
+                    methodList.add(method);
+                }
             }
         }
 

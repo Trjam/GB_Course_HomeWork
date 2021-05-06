@@ -12,9 +12,9 @@ public class MyTests {
         System.out.println("test1, pr default 3");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 5)
     public static void test2(){
-        System.out.println("test2, pr4");
+        System.out.println("test2, pr5");
     }
 
     @Test(priority = 1)
